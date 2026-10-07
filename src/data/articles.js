@@ -1987,5 +1987,51 @@ It's:
 And perhaps that's where true determination begins.`
             }
         ]
+    },
+    {
+        id: 35,
+        slug: "beyond-the-noise-true-revival-means-fixing-nigeria",
+        title: "BEYOND THE NOISE: TRUE REVIVAL MEANS FIXING NIGERIA.",
+        image: "/nigeria.jpg",
+        date: "October 5, 2026",
+        readTime: "8 min read",
+        category: "Politics",
+        author: "Chizzy",
+        excerpt: "Nigeria’s revival cannot be reduced to speeches, slogans, or moments of national excitement. True revival demands confronting the problems that hold the country back from weak institutions and poor infrastructure to corruption, insecurity, and a culture that too often rewards survival over progress. Beyond the noise lies a harder question: what would it actually take to fix Nigeria?",
+        content: [
+            {
+                type: "paragraph",
+                text: `The sudden outburst of debate regarding what Apostle Arome said about Nigerians claiming to be in a revival has caused a lot of havoc, extending far beyond what we can see. Nigeria is a country with the highest number of pastors, evangelists, and other men of God. Unfortunately, this has also created room for fake pastors, who may now outnumber genuine ministers. Nigerians have dwelt so deeply in the darkness of religion and religious laws that they tend to miss the light right before them. We have enjoyed being in chains for so long that freedom actually looks bad to us.
+When Jesus came to earth, one of his purposes was to revive both the world and the church. In those days, the Jews focused so heavily on religious practices and routines that they did not know God for themselves. Jesus came to show them the path that leads to God; the path to the light. Jesus died so that we might gain everything good on earth: a good life ("by His stripes we are healed": Isaiah 53:5 / 1 Peter 2:24), wealth, and entry into God’s kingdom.`
+            },
+            {
+                type: "paragraph",
+                text: `However, righteousness is what upholds a nation ("Righteousness exalts a nation, but sin is a reproach to any people": Proverbs 14:34). Many Nigerians do not understand that God wants to revive our country by bringing back to life everything that is currently dead. God wants to revive our currency, our government, our education system, our health sector, and every other part of Nigeria. Unfortunately, we are often too blind and too carnal to understand and accept His word. We only view things through the flesh. Do you know that on the last day, the flesh will not stand with you in judgment? Only your spirit will. This is why we must see things through the lens of the spirit rather than the physical.`
+            },
+            {
+                type: "paragraph",
+                text: `For Nigeria to become a better place, we must join hands and walk in righteousness, because righteousness exalts a nation. If corruption keeps eating deep into our foundations, even down to the grassroots, this country can never move forward. Let us do something new: turn to God, ask purely for His mercy, and live righteously.
+We must also participate in political affairs. If Christians keep insisting that their place is only inside the church to pray, there will never be any change. We must balance the system by living righteously; refusing to accept bribes, rejecting any form of malpractice, and avoiding corruption as if it were a deadly disease, because it is.`
+            },
+            {
+                type: "paragraph",
+                text: "Have you ever wondered why America is considered a great global power?"
+            },
+            {
+                type: "list",
+                text: [
+                    `First, printed on the U.S. dollar is the motto, "In God We Trust." If you read the history of America, you will see exactly what we are doing wrong.`,
+                    `Second, Americans hate bribery and corruption; they take accountability very seriously in their land.`
+                ]
+            },
+            {
+                type: "paragraph",
+                text: `In Nigeria, we do little to nothing and yet expect miracles to happen. Even as we fight against corruption and strive to be righteous, let us come out, join hands, and put Nigeria in order. Christians are called to be the "light of the world" (Matthew 5:14), not just the light of the church. God wants to use the church to impact the world. You and I are part of that church, and He is sending us out into the world to bring light into this darkness.`
+            },
+            {
+                type: "paragraph",
+                text: `Therefore, our active participation is desperately needed in every sector of Nigeria, especially in politics. As the Bible says, "When the righteous are in authority, the people rejoice; but when a wicked man rules, the people groan" (Proverbs 29:2). We can no longer sit down and fold our hands. Let us stand up and make Nigeria great again, and watch how He will "heal our land" (2 Chronicles 7:14).`
+            }
+        ]
     }
 ]
