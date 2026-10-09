@@ -4,6 +4,8 @@ import { articles } from "../data/articles";
 import ArticleCard from "../components/ArticleCard";
 import Newsletter from "../components/Newsletter";
 import SEO from "../components/SEO";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const featuredArticle = articles.find(
@@ -19,7 +21,9 @@ export default function Home() {
     url="/"
   />
   return (
-    <main className="
+    <div>
+      <Navbar />
+      <main className="
     min-h-screen
     bg-chizzy-paper
     text-chizzy-ink
@@ -29,16 +33,16 @@ export default function Home() {
     duration-300
   ">
 
-      {/* Hero Section!!!!!!!!!!!!! */}
+        {/* Hero Section!!!!!!!!!!!!! */}
 
-      <section className="
+        <section className="
 min-h-[85vh]
 flex
 items-center
 pt-20
 px-6
 ">
-        <div className="
+          <div className="
 max-w-7xl
 mx-auto
 w-full
@@ -47,8 +51,8 @@ lg:grid-cols-2
 gap-16
 items-center
 ">
-          <div>
-            <p className="
+            <div>
+              <p className="
 text-sm
 uppercase
 tracking-[0.3em]
@@ -56,10 +60,10 @@ text-[#b7791f]
 font-semibold
 mb-6
 ">
-              ChizzyWrites
-            </p>
+                ChizzyWrites
+              </p>
 
-            <h1 className="
+              <h1 className="
 heading-font
 text-6xl
 md:text-7xl
@@ -68,14 +72,14 @@ leading-[0.95]
 tracking-tight
 mb-8
 ">
-              Ideas worth
-              <br />
-              <span className="italic">
-                reading.
-              </span>
-            </h1>
+                Ideas worth
+                <br />
+                <span className="italic">
+                  reading.
+                </span>
+              </h1>
 
-            <p className="
+              <p className="
 max-w-xl
 text-lg
 md:text-xl
@@ -84,14 +88,14 @@ text-black/60
 dark:text-white/60
 mb-10
 ">
-              Thought-provoking articles about technology,
-              life, creativity, culture and the ideas shaping
-              the world around us.
-            </p>
+                Thought-provoking articles about technology,
+                life, creativity, culture and the ideas shaping
+                the world around us.
+              </p>
 
-            <Link
-              to="/articles"
-              className="
+              <Link
+                to="/articles"
+                className="
 inline-flex
 items-center
 gap-3
@@ -106,15 +110,15 @@ font-medium
 hover:gap-5
 transition-all
 "
-            >
-              Explore articles
-              <FiArrowRight size={18} />
-            </Link>
-          </div>
+              >
+                Explore articles
+                <FiArrowRight size={18} />
+              </Link>
+            </div>
 
-          {/* Hero iMAGE */}
-          <div className="relative">
-            <div className="
+            {/* Hero iMAGE */}
+            <div className="relative">
+              <div className="
 overflow-hidden
 rounded-[2rem]
 rotate-2
@@ -122,15 +126,15 @@ hover:rotate-0
 transition-transform
 duration-700
 ">
-              <img src={featuredArticle.image}
-                alt={featuredArticle.title}
-                className="
+                <img src={featuredArticle.image}
+                  alt={featuredArticle.title}
+                  className="
 w-full
 aspect-[4/5]
 object-cover
 "/>
-            </div>
-            <div className="
+              </div>
+              <div className="
 absolute
 -bottom-8
 -left-8
@@ -144,25 +148,25 @@ border
 border-black/5
 dark:border-white/5
 ">
-              <p className="
+                <p className="
 text-xs
 uppercase
 tracking-[0.2em]
 text-[#b7791f]
 mb-3
 ">
-                Featured
-              </p>
-              <h2 className="
+                  Featured
+                </p>
+                <h2 className="
 heading-font
 text-xl
 leading-tight
 mb-3
 ">
-                {featuredArticle.title}
-              </h2>
+                  {featuredArticle.title}
+                </h2>
 
-              <Link to={`/article/${featuredArticle.slug}`} className="
+                <Link to={`/article/${featuredArticle.slug}`} className="
 inline-flex
 items-center
 gap-2
@@ -170,17 +174,17 @@ text-sm
 font-medium
 hover:text-[#b7791f]
 ">
-                Read article
-                <FiArrowUpRight size={16} />
-              </Link>
+                  Read article
+                  <FiArrowUpRight size={16} />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Latest Articles */}
-      <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="
+        </section>
+        {/* Latest Articles */}
+        <section className="py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="
 flex
 flex-col
 md:flex-row
@@ -189,27 +193,27 @@ justify-between
 gap-6
 mb-12
 ">
-            <div>
-              <p className="
+              <div>
+                <p className="
 text-sm
 uppercase
 tracking-[0.25em]
 text-[#b7791f]
 mb-4
 ">
-                Fresh from the desk
-              </p>
+                  Fresh from the desk
+                </p>
 
-              <h2 className="
+                <h2 className="
 heading-font
 text-4xl
 md:text-5xl
 ">
-                Latest articles
-              </h2>
-            </div>
-            <Link to="/articles"
-              className="
+                  Latest articles
+                </h2>
+              </div>
+              <Link to="/articles"
+                className="
 inline-flex
 items-center
 gap-2
@@ -217,75 +221,75 @@ text-sm
 font-medium
 hover:text-[#b7791f]
 ">
-              View All
-              <FiArrowRight size={17} />
-            </Link>
-          </div>
+                View All
+                <FiArrowRight size={17} />
+              </Link>
+            </div>
 
-          <div className="
+            <div className="
 grid
 md:grid-cols-2
 lg:grid-cols-3
 gap-x-8
 gap-y-16
 ">
-            {latestArticles.reverse().map((article) => (
-              <ArticleCard key={article.id} article={article} />
-            ))}
+              {latestArticles.reverse().map((article) => (
+                <ArticleCard key={article.id} article={article} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Topics */}
-      <section className="
+        {/* Topics */}
+        <section className="
 py-32
 px-6
 border-y
 border-black/5
 dark:border-white/5
 ">
-        <div className="max-w-7xl mx-auto">
-          <p className="
+          <div className="max-w-7xl mx-auto">
+            <p className="
 text-sm
 uppercase
 tracking-[0.25em]
 text-[#b7791f]
 mb-5
 ">
-            Explore
-          </p>
-          <h2 className="
+              Explore
+            </p>
+            <h2 className="
 heading-font
 text-4xl
 md:text-5xl
 mb-12
 ">
-            Find something
-            <br />
-            worth thinking about.
-          </h2>
-          <div className="
+              Find something
+              <br />
+              worth thinking about.
+            </h2>
+            <div className="
 grid
 grid-cols-2
 md:grid-cols-3
 lg:grid-cols-6
 gap-4
 ">
-            {[
-              "Technology",
-              "Business",
-              "Life",
-              "Culture",
-              "Ideas",
-              "Spiritual Growth",
-              "Health",
-              "Personal",
-            ].map((topic) => (
+              {[
+                "Technology",
+                "Business",
+                "Life",
+                "Culture",
+                "Ideas",
+                "Spiritual Growth",
+                "Health",
+                "Personal",
+              ].map((topic) => (
 
-              <Link
-                key={topic}
-                to={`/categories?topic=${topic.toLowerCase()}`}
-                className="
+                <Link
+                  key={topic}
+                  to={`/categories?topic=${topic.toLowerCase()}`}
+                  className="
 p-6
 rounded-2xl
 border
@@ -297,19 +301,21 @@ dark:hover:bg-[#f5f2ea]
 dark:hover:text-[#111111]
 transition-all
 "
-              >
-                <span className="text-sm font-medium">
-                  {topic}
-                </span>
-              </Link>
+                >
+                  <span className="text-sm font-medium">
+                    {topic}
+                  </span>
+                </Link>
 
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Newsletter */}
-      <Newsletter />
-    </main>
+        {/* Newsletter */}
+        <Newsletter />
+      </main>
+      <Footer />
+    </div>
   )
 }

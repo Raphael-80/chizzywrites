@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FiArrowRight, FiCheck } from "react-icons/fi";
+import { supabase } from "../lib/supabase";
 
 export default function Newsletter() {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState("idle");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const trimmedEmail = email.trim();
@@ -22,8 +23,26 @@ export default function Newsletter() {
             return;
         }
 
-        // Temporary success state.
-        // Connect this to your newsletter provider/backend later.
+        setStatus("loading");
+
+        const { error } = await supabase
+            .from("subscribers")
+            .insert({
+                email: trimmedEmail.toLowerCase(),
+            });
+
+        if (error) {
+            console.error("Subscription error:", error);
+
+            if (error.code === "23505") {
+                setStatus("already-subscribed");
+            } else {
+                setStatus("server-error");
+            }
+
+            return;
+        }
+
         setStatus("success");
         setEmail("");
     };

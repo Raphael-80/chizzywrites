@@ -5,6 +5,8 @@ import { FiArrowRight } from "react-icons/fi";
 import { articles } from "../data/articles";
 import SEO from "../components/SEO";
 import ArticleCard from "../components/ArticleCard";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Articles() {
   const [activeCategory, setActiveCategory] =
@@ -45,8 +47,10 @@ export default function Articles() {
   />
 
   return (
-    <main
-      className="
+    <div>
+      <Navbar />
+      <main
+        className="
         min-h-screen
         bg-chizzy-paper
         text-chizzy-ink
@@ -55,14 +59,14 @@ export default function Articles() {
         transition-colors
         duration-300
       "
-    >
-      {/* Header */}
+      >
+        {/* Header */}
 
-      <section className="pt-36 md:pt-44 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
+        <section className="pt-36 md:pt-44 pb-20 px-6">
+          <div className="max-w-7xl mx-auto">
 
-          <p
-            className="
+            <p
+              className="
               text-xs
               md:text-sm
               uppercase
@@ -71,20 +75,20 @@ export default function Articles() {
               font-semibold
               mb-6
             "
-          >
-            The ChizzyWrites Journal
-          </p>
+            >
+              The ChizzyWrites Journal
+            </p>
 
-          <div
-            className="
+            <div
+              className="
               grid
               lg:grid-cols-[1fr_420px]
               gap-10
               items-end
             "
-          >
-            <h1
-              className="
+            >
+              <h1
+                className="
                 heading-font
                 text-6xl
                 md:text-7xl
@@ -92,12 +96,12 @@ export default function Articles() {
                 leading-[0.9]
                 tracking-tight
               "
-            >
-              Articles
-            </h1>
+              >
+                Articles
+              </h1>
 
-            <p
-              className="
+              <p
+                className="
                 text-base
                 md:text-lg
                 leading-8
@@ -106,29 +110,29 @@ export default function Articles() {
                 max-w-md
                 lg:pb-2
               "
-            >
-              Ideas, perspectives and stories
-              worth taking your time to read.
-              Explore thoughtful writing on life,
-              mindset, technology, culture and
-              everything in between.
-            </p>
+              >
+                Ideas, perspectives and stories
+                worth taking your time to read.
+                Explore thoughtful writing on life,
+                mindset, technology, culture and
+                everything in between.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Article */}
+        {/* Featured Article */}
 
-      {featuredArticle && (
-        <section className="px-6 pb-24">
-          <div className="max-w-7xl mx-auto">
+        {featuredArticle && (
+          <section className="px-6 pb-24">
+            <div className="max-w-7xl mx-auto">
 
-            <Link
-              to={`/article/${featuredArticle.slug}`}
-              className="group block"
-            >
-              <div
-                className="
+              <Link
+                to={`/article/${featuredArticle.slug}`}
+                className="group block"
+              >
+                <div
+                  className="
                   grid
                   lg:grid-cols-2
                   bg-[#eeeae2]
@@ -137,14 +141,14 @@ export default function Articles() {
                   overflow-hidden
                   transition-colors
                 "
-              >
-                {/* Image */}
+                >
+                  {/* Image */}
 
-                <div className="overflow-hidden">
-                  <img
-                    src={featuredArticle.image}
-                    alt={featuredArticle.title}
-                    className="
+                  <div className="overflow-hidden">
+                    <img
+                      src={featuredArticle.image}
+                      alt={featuredArticle.title}
+                      className="
                       w-full
                       h-full
                       min-h-[350px]
@@ -154,13 +158,13 @@ export default function Articles() {
                       transition-transform
                       duration-1000
                     "
-                  />
-                </div>
+                    />
+                  </div>
 
-                {/* Content */}
+                  {/* Content */}
 
-                <div
-                  className="
+                  <div
+                    className="
                     flex
                     flex-col
                     justify-center
@@ -168,9 +172,9 @@ export default function Articles() {
                     md:p-12
                     lg:p-16
                   "
-                >
-                  <span
-                    className="
+                  >
+                    <span
+                      className="
                       text-xs
                       uppercase
                       tracking-[0.25em]
@@ -178,12 +182,12 @@ export default function Articles() {
                       font-semibold
                       mb-6
                     "
-                  >
-                    Featured Article
-                  </span>
+                    >
+                      Featured Article
+                    </span>
 
-                  <h2
-                    className="
+                    <h2
+                      className="
                       heading-font
                       text-4xl
                       md:text-5xl
@@ -192,12 +196,12 @@ export default function Articles() {
                       group-hover:text-[#b7791f]
                       transition-colors
                     "
-                  >
-                    {featuredArticle.title}
-                  </h2>
+                    >
+                      {featuredArticle.title}
+                    </h2>
 
-                  <p
-                    className="
+                    <p
+                      className="
                       text-base
                       md:text-lg
                       leading-8
@@ -205,12 +209,12 @@ export default function Articles() {
                       dark:text-white/60
                       mb-8
                     "
-                  >
-                    {featuredArticle.excerpt}
-                  </p>
+                    >
+                      {featuredArticle.excerpt}
+                    </p>
 
-                  <div
-                    className="
+                    <div
+                      className="
                       flex
                       items-center
                       justify-between
@@ -220,9 +224,9 @@ export default function Articles() {
                       border-black/10
                       dark:border-white/10
                     "
-                  >
-                    <div
-                      className="
+                    >
+                      <div
+                        className="
                         flex
                         items-center
                         gap-3
@@ -230,66 +234,66 @@ export default function Articles() {
                         text-black/50
                         dark:text-white/50
                       "
-                    >
-                      <span>
-                        {featuredArticle.date}
-                      </span>
+                      >
+                        <span>
+                          {featuredArticle.date}
+                        </span>
 
-                      <span>•</span>
+                        <span>•</span>
 
-                      <span>
-                        {featuredArticle.readTime}
-                      </span>
-                    </div>
+                        <span>
+                          {featuredArticle.readTime}
+                        </span>
+                      </div>
 
-                    <span
-                      className="
+                      <span
+                        className="
                         flex
                         items-center
                         gap-2
                         text-sm
                         font-medium
                       "
-                    >
-                      Read article
-                      <FiArrowRight
-                        size={16}
-                        className="
+                      >
+                        Read article
+                        <FiArrowRight
+                          size={16}
+                          className="
                           group-hover:translate-x-1
                           transition-transform
                         "
-                      />
-                    </span>
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
 
-          </div>
-        </section>
-      )}
+            </div>
+          </section>
+        )}
 
-      {/* Category Filter */}
+        {/* Category Filter */}
 
-      <section className="px-6 pb-16">
-        <div className="max-w-7xl mx-auto">
+        <section className="px-6 pb-16">
+          <div className="max-w-7xl mx-auto">
 
-          <div
-            className="
+            <div
+              className="
               flex
               gap-3
               overflow-x-auto
               pb-3
               scrollbar-hide
             "
-          >
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() =>
-                  setActiveCategory(category)
-                }
-                className={`
+            >
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() =>
+                    setActiveCategory(category)
+                  }
+                  className={`
                   shrink-0
                   px-5
                   py-2.5
@@ -297,26 +301,26 @@ export default function Articles() {
                   text-sm
                   transition-all
                   ${activeCategory === category
-                    ? "bg-[#171717] text-white dark:bg-[#f5f2ea] dark:text-[#111111]"
-                    : "border border-black/10 dark:border-white/10 hover:border-[#b7791f] hover:text-[#b7791f]"
-                  }
+                      ? "bg-[#171717] text-white dark:bg-[#f5f2ea] dark:text-[#111111]"
+                      : "border border-black/10 dark:border-white/10 hover:border-[#b7791f] hover:text-[#b7791f]"
+                    }
                 `}
-              >
-                {category}
-              </button>
-            ))}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
           </div>
+        </section>
 
-        </div>
-      </section>
+        {/* Article Archive */}
 
-      {/* Article Archive */}
+        <section className="px-6 pb-32">
+          <div className="max-w-7xl mx-auto">
 
-      <section className="px-6 pb-32">
-        <div className="max-w-7xl mx-auto">
-
-          <div
-            className="
+            <div
+              className="
               flex
               items-center
               justify-between
@@ -326,80 +330,82 @@ export default function Articles() {
               border-black/10
               dark:border-white/10
             "
-          >
-            <div>
-              <p
-                className="
+            >
+              <div>
+                <p
+                  className="
                   text-xs
                   uppercase
                   tracking-[0.25em]
                   text-[#b7791f]
                   mb-2
                 "
-              >
-                Archive
-              </p>
+                >
+                  Archive
+                </p>
 
-              <h2 className="heading-font text-3xl md:text-4xl">
-                {activeCategory === "All"
-                  ? "Latest articles"
-                  : activeCategory}
-              </h2>
-            </div>
+                <h2 className="heading-font text-3xl md:text-4xl">
+                  {activeCategory === "All"
+                    ? "Latest articles"
+                    : activeCategory}
+                </h2>
+              </div>
 
-            <span
-              className="
+              <span
+                className="
                 text-sm
                 text-black/40
                 dark:text-white/40
               "
-            >
-              {archiveArticles.length}{" "}
-              {archiveArticles.length === 1
-                ? "article"
-                : "articles"}
-            </span>
-          </div>
+              >
+                {archiveArticles.length}{" "}
+                {archiveArticles.length === 1
+                  ? "article"
+                  : "articles"}
+              </span>
+            </div>
 
-          {archiveArticles.length > 0 ? (
-            <div
-              className="
+            {archiveArticles.length > 0 ? (
+              <div
+                className="
                 grid
                 md:grid-cols-2
                 lg:grid-cols-3
                 gap-x-8
                 gap-y-16
               "
-            >
-              {archiveArticles.reverse().map((article) => (
-                <ArticleCard
-                  key={article.id}
-                  article={article}
-                />
-              ))}
-            </div>
-          ) : (
-            <div
-              className="
+              >
+                {archiveArticles.reverse().map((article) => (
+                  <ArticleCard
+                    key={article.id}
+                    article={article}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div
+                className="
                 py-20
                 text-center
                 text-black/50
                 dark:text-white/50
               "
-            >
-              <p className="heading-font text-3xl mb-3">
-                Nothing here yet.
-              </p>
+              >
+                <p className="heading-font text-3xl mb-3">
+                  Nothing here yet.
+                </p>
 
-              <p className="text-sm">
-                More articles in this category
-                are coming soon.
-              </p>
-            </div>
-          )}
+                <p className="text-sm">
+                  More articles in this category
+                  are coming soon.
+                </p>
+              </div>
+            )}
 
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
